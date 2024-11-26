@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect, FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../../store/store";
 import { fetchProducts, selectProduct } from "../../store/product.slice";
@@ -12,7 +12,7 @@ interface Product {
     image: string;
 }
 
-const ProductsListing: React.FC = () => {
+const ProductsListing: FC = () => {
     const dispatch: AppDispatch = useDispatch();
 
     const { filteredProducts, loading, searchTerm } = useSelector(

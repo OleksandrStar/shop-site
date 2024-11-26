@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store";
 import { setSearchTerm } from "../../store/product.slice";

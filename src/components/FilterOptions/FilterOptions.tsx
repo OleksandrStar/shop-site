@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./FilterOptions.module.scss";
 
 interface FilterOptionsProps {

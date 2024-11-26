@@ -7,6 +7,5 @@
     "compilerOptions": {
         "lib": ["es2022"],  // Changed from "ES2023" to "es2022"
         "moduleResolution": "node",  // Changed from "Bundler" to "node"
-        "allowImportingTsExtensions": true  // Ensure TypeScript is updated to 4.5+ for this option
     }
 }
