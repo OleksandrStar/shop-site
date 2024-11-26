@@ -1,28 +1,10 @@
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../store/store";
-import {
-    setCategoryFilter,
-    setPriceSortOrder,
-} from "../../store/product.slice";
 import ProductsListing from "../../components/ProductListing/ProductsListing";
-import FilterOptions from "../../components/FilterOptions/FilterOptions";
-import SortOptions from "../../components/SortOptions/SortOptions";
 
-import styles from "./MainPage.module.scss";
-import { useNavigate } from "react-router-dom";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import styles from "./MainPage.css";
+import {useNavigate} from "react-router-dom";
 
-const MainPage: React.FC = () => {
-    const dispatch = useDispatch<AppDispatch>();
+const MainPage = () => {
     const navigate = useNavigate();
-
-    const handleCategoryChange = (category: string) => {
-        dispatch(setCategoryFilter(category));
-    };
-
-    const handleSortOrderChange = (order: "asc" | "desc") => {
-        dispatch(setPriceSortOrder(order));
-    };
 
     return (
         <div className={styles.wrap}>
@@ -37,9 +19,9 @@ const MainPage: React.FC = () => {
                 </div>
             </header>
             <div className={styles.filters}>
-                <SearchBar/>
-                <FilterOptions onCategoryChange={handleCategoryChange}/>
-                <SortOptions onSortOrderChange={handleSortOrderChange}/>
+                {/*<SearchBar/>*/}
+                {/*<FilterOptions onCategoryChange={handleCategoryChange}/>*/}
+                {/*<SortOptions onSortOrderChange={handleSortOrderChange}/>*/}
             </div>
 
             <ProductsListing/>

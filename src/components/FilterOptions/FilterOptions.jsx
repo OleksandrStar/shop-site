@@ -1,10 +1,7 @@
-import styles from "./FilterOptions.module.scss";
+import styles from "./FilterOptions.css";
 
-interface FilterOptionsProps {
-    onCategoryChange: (category: string) => void;
-}
 
-const FilterOptions: React.FC<FilterOptionsProps> = ({ onCategoryChange }) => {
+const FilterOptions = ({ onCategoryChange }) => {
     return (
         <div>
             <label className={styles.category}>

@@ -1,13 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../store/store";
 import { clearSelectedProduct } from "../../store/product.slice";
 
-import styles from "./ProductDetails.module.scss";
+import styles from "./ProductDetails.css";
 
-const ProductDetails: React.FC = () => {
+const ProductDetails = () => {
     const dispatch = useDispatch();
     const selectedProduct = useSelector(
-        (state: RootState) => state.products.selectedProduct
+        (state) => state.products.selectedProduct
     );
 
     if (!selectedProduct) return null;
